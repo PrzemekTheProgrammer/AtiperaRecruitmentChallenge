@@ -15,7 +15,7 @@ class GithubClient {
 
     private final RestClient restClient;
 
-    // Pobieramy url z konfiguracji, aby łatwo podmienić go na WireMocka w testach
+    // Pobieram url z konfiguracji, aby łatwo podmienić go na WireMocka w testach
     GithubClient(RestClient.Builder restClientBuilder, GithubConfig config) {
         this.restClient = restClientBuilder.baseUrl(config.baseUrl()).build();
     }
